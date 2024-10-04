@@ -5,10 +5,14 @@
 #include <sys/types.h>
 #include <termios.h>
 #include <unistd.h>
+#include <errno.h>
+#include <stdio.h>
+#include <string.h>
 
 #define lab_VERSION_MAJOR 1
 #define lab_VERSION_MINOR 0
 #define UNUSED(x) (void)x;
+#define ARG_MAX sysconf(_SC_ARG_MAX)
 
 #ifdef __cplusplus
 extern "C"
